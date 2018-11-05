@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./css/bootstrap.css" type="text/css">
+    <link rel="stylesheet" href="style.css">
+    <title>Ping Pong</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg">
+        <h2 class="mx-auto">Ping Pong</h2>
+    </nav>
+    <main>
+
+    </main>
+
+
+    <script id="homePage" type="text/x-handlebars-template">
+        <div class="container">
+            <div class="col-sm-12 text-center">
+                <p>Description</p>
+            </div>
+            <div class="col-sm-12">
+                <button id="signUpBtn" class="home-button mx-auto d-block">Sign Up</button>
+                <button id="loginBtn" class="home-button mx-auto d-block">Login</button>
+            </div>
+        </div>
+    </script>
+    <script id="registerPage" type="text/x-handlebars-template">
+        <fieldset>
+            <legend>Sign Up</legend>
+            <label>Username<br />
+            <input type="text" id="username" /></label><br />
+            <label>Password<br />
+            <input type="password" id="password" /></label><br />
+            <label>Repeat Password<br />
+            <input type="password" id="passwordRepeat" /></label><br />
+            <button id="">Sign Up</button>
+        </fieldset>
+    </script>
+    <script id="loginPage" type="text/x-handlebars-template">
+        <fieldset>
+            <legend>Login</legend>
+            <label>Username<br />
+            <input type="text" id="username"/></label><br />
+            <label>Password<br />
+            <input type="text" id="password"/></label><br />
+            <button id="">Login</button>
+        </fieldset>
+    </script>
+
+    <script src="javascript.js"></script>
+    <script src="bootstrap/jquery.js"></script>
+    <script src="bootstrap/popper.js"></script>
+    <script src="bootstrap/bootstrap.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.12/handlebars.min.js" defer></script>
+</body>
+
+</html>
