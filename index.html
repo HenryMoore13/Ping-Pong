@@ -21,9 +21,9 @@
 
     <script id="homePage" type="text/x-handlebars-template">
         <div class="container">
-            <div class="col-sm-12 text-center">
+            <!-- <div class="col-sm-12 text-center">
                 <p>Description</p>
-            </div>
+            </div> -->
             <div class="col-sm-12">
                 <button id="signUpBtn" class="home-button mx-auto d-block">Sign Up</button>
                 <button id="loginBtn" class="home-button mx-auto d-block">Login</button>
@@ -31,26 +31,52 @@
         </div>
     </script>
     <script id="registerPage" type="text/x-handlebars-template">
-        <fieldset>
-            <legend>Sign Up</legend>
-            <label>Username<br />
-            <input type="text" id="username" /></label><br />
-            <label>Password<br />
-            <input type="password" id="password" /></label><br />
-            <label>Repeat Password<br />
-            <input type="password" id="passwordRepeat" /></label><br />
-            <button id="">Sign Up</button>
+        <fieldset id="signUp" class="text-center mx-auto">
+            <div class="form-group">
+                <legend class="mx-auto">Sign Up</legend>
+                <label>Username<br />
+                <input type="text" id="username" required /></label><br />
+                <label>Password<br />
+                <input type="password" id="password" required/></label><br />
+                <label>Repeat Password<br />
+                <input type="password" id="passwordRepeat" required/></label><br />
+                <button type="submit" id="sinBtn">Sign Up</button>
+            </div>
         </fieldset>
     </script>
     <script id="loginPage" type="text/x-handlebars-template">
-        <fieldset>
-            <legend>Login</legend>
-            <label>Username<br />
-            <input type="text" id="username"/></label><br />
-            <label>Password<br />
-            <input type="text" id="password"/></label><br />
-            <button id="">Login</button>
+        <form>
+        <fieldset id="login" class="text-center mx-auto">
+            <div class="form-group">
+                <legend class="mx-auto">Login</legend>
+                <label>Username<br />
+                <input type="text" id="username"required/></label><br />
+                <label>Password<br />
+                <input type="password" id="password"required/></label><br />
+                <button type="submit" id="logBtn">Login</button>
+            </div>
         </fieldset>
+        </form>
+    </script>
+
+
+    <script id="userHomePage" type="text/x-handlebars-template">
+        <div id="gameArea" class="mx-auto">
+            <button id="newGameBtn" class="mx-auto text-center">Start Game</button>
+        </div>
+    </script>
+
+    <script id="gameWindow" type="text/x-handlebars-template">
+        <div>
+        <div class="form-group">
+                <input id="p1USER" type="text" id="username" placeholder="Player1" required/>
+                <input id="p2USER" type="text" id="username" placeholder="Player2" required/>
+                <button id="play" type="submit" id="ValBtn" disabled>Lets Play</button>
+        </div>
+        <div>
+            <p></p>
+        </div>
+        </div>
     </script>
 
     <script src="javascript.js"></script>

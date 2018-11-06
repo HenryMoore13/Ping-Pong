@@ -1,0 +1,75 @@
+.navbar {
+    background-color: rgb(106, 176, 216);
+    color: white;
+}
+#signUpBtn {
+    border: none;
+    margin: 1rem;
+    border-radius: 3px;
+    background-color: rgb(150, 144, 144);
+    color: white;
+}
+#loginBtn {
+    border: none;
+    margin: 1rem;
+    border-radius: 3px;
+    background-color: rgb(156, 154, 154);
+    color: white;
+}
+
+#login {
+    border: 1px solid grey;
+    border-radius: 5px;
+    width: 23rem;
+    background-color: white;
+}
+#login legend {
+    width: 4rem;
+}
+#logBtn {
+    border: none;
+    background-color: rgb(133, 127, 127);
+    border-radius: 4px;
+    color: white;
+}
+#signUp {
+    border: 1px solid grey;
+    border-radius: 5px;
+    width: 23rem;
+    background-color: white;
+}
+#sinBtn {
+    border: none;
+    background-color: rgb(133, 127, 127);
+    border-radius: 4px;
+    color: white;
+}
+#signUp legend {
+    width: 6rem;
+}
+body {
+    background-color: rgb(250, 232, 154);
+}
+#newGameBtn {
+    border: none;
+    margin: 1rem;
+    border-radius: 3px;
+    background-color: rgb(156, 154, 154);
+    color: white;
+}
+#playTime {
+    padding: 2rem;
+    background-color: white;
+    width: 23rem;
+    height: 6rem;
+}
+#gameArea {
+    width: 23rem;
+}
+#play {
+    border: none;
+    margin: 1rem;
+    border-radius: 3px;
+    background-color: rgb(156, 154, 154);
+    color: white;
+}
