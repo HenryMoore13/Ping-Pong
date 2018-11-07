@@ -154,17 +154,24 @@ function isVal(usernames) {
 function checkUser(usernames) {
     var player1 = document.getElementById("p1USER").value;
     var player2 = document.getElementById("p2USER").value;
-    console.log(player1);
+
     var btn = document.getElementById("play");
     if (usernames.includes(player1) && usernames.includes(player2)) {
         btn.removeAttribute("disabled");
     }
-    // playBtn(usernames)
+    nameVal(player1, player2);
 }
-// function playBtn(usernames){
-//     var btn = document.getElementById("play");
-//     btn.addEventListener("click", ()=> {
+function nameVal(player1, player2) {
+    var btn = document.querySelector("#play");
+    var game = document.querySelector("#playTime");
 
-//     })
-// }
+    btn.addEventListener("click", () => {
+        game.removeAttribute("hidden");
+        document.querySelector("#ply1Name").innerText = player1;
+        document.querySelector("#ply2Name").innerText = player2;
+        document.getElementById("userInputs").hidden = true;
+    });
+    // console.log(player1);
+    // console.log(player2);
+}
 renderHomePage(main, PAGE_DATA);

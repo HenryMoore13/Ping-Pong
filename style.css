@@ -73,3 +73,24 @@ body {
     background-color: rgb(156, 154, 154);
     color: white;
 }
+#playTime {
+    width: 23rem;
+    background-color: white;
+    height: 12rem;
+
+    border-radius: 3px;
+}
+#ply1Count,
+#ply2Count {
+    margin: 0 1rem 0 0;
+    border: none;
+    background-color: rgb(133, 127, 127);
+    border-radius: 4px;
+    color: white;
+}
+#ply1side,
+#ply2side {
+    border: 2px solid black;
+    padding: 0 1.5rem 0 1.5rem;
+    border-radius: 3px;
+}

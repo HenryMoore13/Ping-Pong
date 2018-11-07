@@ -68,13 +68,35 @@
 
     <script id="gameWindow" type="text/x-handlebars-template">
         <div>
-        <div class="form-group">
-                <input id="p1USER" type="text" id="username" placeholder="Player1" required/>
-                <input id="p2USER" type="text" id="username" placeholder="Player2" required/>
+        <div id="userInputs" class="form-group">
+            <div>
+                <input id="p1USER" type="text" placeholder="Player1" required/>
+                <input id="p2USER" type="text" placeholder="Player2" required/>
                 <button id="play" type="submit" id="ValBtn" disabled>Lets Play</button>
+            </div>
         </div>
-        <div>
-            <p></p>
+
+        <div id="playTime" hidden>
+            <div class="d-flex">
+                <div id="ply1side">
+                    <p id="ply1Name">Player1</p>
+                    <center>
+                    <h1 id="ply1Score" class="mx-auto">0</h1></center>
+                    <div class="d-flex">
+                        <button id="ply1Count">+1</button>
+                        <button id="ply1Count">-1</button>
+                    </div>
+                </div>
+                <div id="ply2side" class="ml-auto">
+                    <p id="ply2Name">Player2</p>
+                    <center>
+                    <h1 id="ply2Score" class="mx-auto">0</h1></center>
+                    <div class="d-flex">
+                        <button id="ply2Count">+1</button>
+                        <button id="ply2Count">-1</button>
+                    </div>
+                </div>
+            </div>
         </div>
         </div>
     </script>
