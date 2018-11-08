@@ -73,7 +73,7 @@ function login(data) {
         .then(response => response.json())
         .then(obj => {
             data.token = obj.token;
-            console.log(data.token);
+
             data.username = username;
             renderUserHome(main, PAGE_DATA);
         })
@@ -142,18 +142,23 @@ function renderNewGame(PAGE_DATA, usernames) {
 function isVal(usernames) {
     var player1 = document.getElementById("p1USER");
     var player2 = document.getElementById("p2USER");
+    console.log(player1);
+    console.log(player1);
     player1.addEventListener("input", () => {
         checkUser(usernames);
-        console.log(usernames);
     });
     player2.addEventListener("input", () => {
         checkUser(usernames);
     });
+    total(usernames);
 }
 
 function checkUser(usernames) {
     var player1 = document.getElementById("p1USER").value;
     var player2 = document.getElementById("p2USER").value;
+
+    PAGE_DATA.player_1 = player1;
+    PAGE_DATA.player_2 = player2;
 
     var btn = document.getElementById("play");
     if (usernames.includes(player1) && usernames.includes(player2)) {
@@ -171,7 +176,63 @@ function nameVal(player1, player2) {
         document.querySelector("#ply2Name").innerText = player2;
         document.getElementById("userInputs").hidden = true;
     });
-    // console.log(player1);
-    // console.log(player2);
+}
+function total(usernames) {
+    // var player1 = document.getElementById("p1USER").value;
+    // var player2 = document.getElementById("p2USER").value;
+    player1 = PAGE_DATA.player_1;
+    player2 = PAGE_DATA.player_2;
+    var p1UP = document.getElementById("ply1UCount");
+    p1UP.addEventListener("click", () => {
+        var score1 = document.getElementById("ply1Score");
+        let newScore = Number(score1.innerText) + 1;
+        score1.innerText = newScore;
+        var end = document.getElementById("endGame");
+        if (newScore == 10) {
+            document.getElementById("playTime").hidden = true;
+            end.hidden = false;
+            winner(document.querySelector("#ply1Name").innerText, usernames);
+        }
+    });
+    var p1D = document.getElementById("ply1DCount");
+    p1D.addEventListener("click", () => {
+        var score1 = document.getElementById("ply1Score");
+        let newScore = Number(score1.innerText) - 1;
+        score1.innerText = newScore;
+    });
+
+    var p2UP = document.getElementById("ply2UCount");
+    p2UP.addEventListener("click", () => {
+        var score2 = document.getElementById("ply2Score");
+        let newScore = Number(score2.innerText) + 1;
+        score2.innerText = newScore;
+        console.log(newScore);
+        var end = document.getElementById("endGame");
+        if (newScore == 10) {
+            document.getElementById("playTime").hidden = true;
+            end.hidden = false;
+            win(document.querySelector("#ply2Name").innerText, usernames);
+        }
+    });
+    var p2D = document.getElementById("ply2DCount");
+    p2D.addEventListener("click", () => {
+        var score2 = document.getElementById("ply2Score");
+        let newScore = Number(score2.innerText) - 1;
+        score2.innerText = newScore;
+    });
+}
+function winner(player, usernames) {
+    document.getElementById("winner").innerText = player;
+    var newBtn = document.getElementById("startNew");
+    newBtn.addEventListener("click", () => {
+        renderNewGame(PAGE_DATA, usernames);
+    });
+}
+function win(player, usernames) {
+    document.getElementById("winner").innerText = player;
+    var newBtn = document.getElementById("startNew");
+    newBtn.addEventListener("click", () => {
+        renderNewGame(PAGE_DATA, usernames);
+    });
 }
 renderHomePage(main, PAGE_DATA);
