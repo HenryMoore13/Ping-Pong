@@ -1,123 +1,121 @@
 <!DOCTYPE html>
 <html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <link rel="stylesheet" href="./css/bootstrap.css" type="text/css" />
+        <link rel="stylesheet" href="style.css" />
+        <title>Ping Pong</title>
+    </head>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="./css/bootstrap.css" type="text/css">
-    <link rel="stylesheet" href="style.css">
-    <title>Ping Pong</title>
-</head>
+    <body>
+        <nav class="navbar navbar-expand-lg">
+            <h1 class="mx-auto">Ping Pong</h1>
+        </nav>
+        <main></main>
 
-<body>
-    <nav class="navbar navbar-expand-lg">
-        <h1 class="mx-auto">Ping Pong</h1>
-    </nav>
-    <main>
-
-    </main>
-
-
-    <script id="homePage" type="text/x-handlebars-template">
-        <div class="container">
-            <!-- <div class="col-sm-12 text-center">
-                <p>Description</p>
-            </div> -->
-            <div class="col-sm-12">
-                <button id="signUpBtn" class="home-button mx-auto d-block">Sign Up</button>
-                <button id="loginBtn" class="home-button mx-auto d-block">Login</button>
-            </div>
-        </div>
-    </script>
-    <script id="registerPage" type="text/x-handlebars-template">
-        <fieldset id="signUp" class="text-center mx-auto">
-            <div class="form-group">
-                <legend class="mx-auto">Sign Up</legend>
-                <label>Username<br />
-                <input type="text" id="username" required /></label><br />
-                <label>Password<br />
-                <input type="password" id="password" required/></label><br />
-                <label>Repeat Password<br />
-                <input type="password" id="passwordRepeat" required/></label><br />
-                <button type="submit" id="sinBtn">Sign Up</button>
-            </div>
-        </fieldset>
-    </script>
-    <script id="loginPage" type="text/x-handlebars-template">
-        <form>
-        <fieldset id="login" class="text-center mx-auto">
-            <div class="form-group">
-                <legend class="mx-auto">Login</legend>
-                <label>Username<br />
-                <input type="text" id="username"required/></label><br />
-                <label>Password<br />
-                <input type="password" id="password"required/></label><br />
-                <button type="submit" id="logBtn">Login</button>
-            </div>
-        </fieldset>
-        </form>
-    </script>
-
-
-    <script id="userHomePage" type="text/x-handlebars-template">
-        <div id="gameArea" class="mx-auto">
-            <button id="newGameBtn" class="mx-auto text-center">Start Game</button>
-        </div>
-    </script>
-
-    <script id="gameWindow" type="text/x-handlebars-template">
-        <div>
-        <div id="userInputs" class="form-group">
-            <div>
-                <h4 id="title">Type Usernames below!!</h4>
-            </div>
-            <div>
-                <input id="p1USER" type="text" placeholder="Player1" required/>
-                <input id="p2USER" type="text" placeholder="Player2" required/>
-                <button id="play" type="submit" disabled>Lets Play</button>
-            </div>
-        </div>
-
-        <div id="playTime" hidden>
-            <div class="d-flex">
-                <div id="ply1side">
-                    <p id="ply1Name">Player1</p>
-                    <center>
-                    <h1 id="ply1Score" class="mx-auto">0</h1></center>
-                    <div class="d-flex">
-                        <button id="ply1UCount">+1</button>
-                        <button id="ply1DCount">-1</button>
-                    </div>
+        <script id="homePage" type="text/x-handlebars-template">
+            <div class="container">
+                <!-- <div class="col-sm-12 text-center">
+                    <p>Description</p>
+                </div> -->
+                <div class="col-sm-12">
+                    <button id="signUpBtn" class="home-button mx-auto d-block">Sign Up</button>
+                    <button id="loginBtn" class="home-button mx-auto d-block">Login</button>
                 </div>
-                <div id="ply2side" class="ml-auto">
-                    <p id="ply2Name">Player2</p>
-                    <center>
-                    <h1 id="ply2Score" class="mx-auto">0</h1></center>
-                    <div class="d-flex">
-                        <button id="ply2UCount">+1</button>
-                        <button id="ply2DCount">-1</button>
+            </div>
+        </script>
+        <script id="registerPage" type="text/x-handlebars-template">
+            <fieldset id="signUp" class="text-center mx-auto">
+                <div class="form-group">
+                    <legend class="mx-auto">Sign Up</legend>
+                    <label>Username<br />
+                    <input type="text" id="username" required /></label><br />
+                    <label>Password<br />
+                    <input type="password" id="password" required/></label><br />
+                    <label>Repeat Password<br />
+                    <input type="password" id="passwordRepeat" required/></label><br />
+                    <button type="submit" id="sinBtn">Sign Up</button>
+                </div>
+            </fieldset>
+        </script>
+        <script id="loginPage" type="text/x-handlebars-template">
+            <form>
+            <fieldset id="login" class="text-center mx-auto">
+                <div class="form-group">
+                    <legend class="mx-auto">Login</legend>
+                    <label>Username<br />
+                    <input type="text" id="username"required/></label><br />
+                    <label>Password<br />
+                    <input type="password" id="password"required/></label><br />
+                    <button type="submit" id="logBtn">Login</button>
+                </div>
+            </fieldset>
+            </form>
+        </script>
+
+        <script id="userHomePage" type="text/x-handlebars-template">
+            <div id="gameArea" class="mx-auto">
+                <button id="newGameBtn" class="mx-auto text-center">Start Game</button>
+            </div>
+        </script>
+
+        <script id="gameWindow" type="text/x-handlebars-template">
+            <div>
+            <div id="userInputs" class="form-group">
+                <div>
+                    <h4 id="title">Type Usernames below!!</h4>
+                </div>
+                <div>
+                    <input id="p1USER" type="text" placeholder="Player1" required/>
+                    <input id="p2USER" type="text" placeholder="Player2" required/>
+                    <button id="play" type="submit" disabled>Lets Play</button>
+                </div>
+            </div>
+
+            <div id="playTime" hidden>
+                <div class="d-flex justify-content-center">
+                    <div id="ply1side">
+                        <p id="ply1Name">Player1</p>
+                        <center>
+                        <h1 id="ply1Score" class="mx-auto">0</h1>
+                        </center>
+                        <div class="d-flex">
+                            <button id="ply1UCount">+1</button>
+                            <button id="ply1DCount">-1</button>
+                        </div>
+                    </div>
+                    <div id="ply2side" class="mx-auto">
+                        <p id="ply2Name">Player2</p>
+                        <center>
+                        <h1 id="ply2Score" class="mx-auto">0</h1></center>
+                        <div class="d-flex">
+                            <button id="ply2UCount">+1</button>
+                            <button id="ply2DCount">-1</button>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <div id="endGame" hidden>
-            <div id="winnerbox">
-                <h2 id="winner" class="text-center">WINNER!!</h2>
-                <h3 class="text-center">Is the Ping Pong Master!!</h3>
-                <center>
-                <button id="startNew">New Game</button>
-                </center>
+            <div id="endGame" hidden>
+                <div id="winnerbox">
+                    <h2 id="winner" class="text-center">WINNER!!</h2>
+                    <h3 class="text-center">Is the Ping Pong Master!!</h3>
+                    <center>
+                    <button id="startNew">New Game</button>
+                    </center>
+                </div>
             </div>
-        </div>
-        </div>
-    </script>
+            </div>
+        </script>
 
-    <script src="javascript.js"></script>
-    <script src="bootstrap/jquery.js"></script>
-    <script src="bootstrap/popper.js"></script>
-    <script src="bootstrap/bootstrap.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.12/handlebars.min.js" defer></script>
-</body>
-
+        <script src="javascript.js"></script>
+        <script src="bootstrap/jquery.js"></script>
+        <script src="bootstrap/popper.js"></script>
+        <script src="bootstrap/bootstrap.js"></script>
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.12/handlebars.min.js"
+            defer
+        ></script>
+    </body>
 </html>
